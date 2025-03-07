@@ -228,4 +228,22 @@ public class AnagramTest {
         }
     }
 
+    @Test
+    @DisplayName("Should throw exception when character set contains duplicate characters")
+    public void shouldThrowExceptionWhenCharacterSetContainsDuplicateCharacters() {
+
+        String[] args = {"a", "a"};
+
+        try {
+            AnagramOrchestrator anagram =
+                    new AnagramOrchestrator(characterSetFabric, characterValidation, anagramValidation);
+
+            anagram.create(args);
+            fail("Should throw exception");
+        } catch (Exception exception) {
+            assertInstanceOf(IllegalArgumentException.class, exception);
+            assertEquals("characterSet must have at least 2 characters", exception.getMessage());
+        }
+    }
+
 }

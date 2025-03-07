@@ -9,6 +9,8 @@ Este projeto se trata de um **gerador de anagramas**, que utiliza um conjunto de
 - Valida os caracteres para garantir que sejam válidos:
     - Não podem estar nulos.
     - Devem ser apenas caracteres alfabéticos (de A-Z, maiúsculas ou minúsculas).
+    - **Letras repetidas são descartadas**: cada caractere no conjunto final é **único**.
+
 - Gera todas as combinações possíveis (anagramas) do conjunto fornecido.
 - Exibe os anagramas no console e também registra os eventos importantes da execução usando `Logger`.
 
