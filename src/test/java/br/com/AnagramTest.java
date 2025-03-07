@@ -5,7 +5,6 @@ import br.com.validation.AnagramValidation;
 import br.com.validation.AnagramValidator;
 import br.com.validation.CharacterValidation;
 import br.com.validation.CharacterValidator;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
