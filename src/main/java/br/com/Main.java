@@ -14,14 +14,14 @@ public class Main {
     public static void main(String[] args) {
 
         final Logger log = Logger.getLogger(Main.class.getName());
-        final CharacterSetBuilder characterSetBuilder = new CharacterSetBuilder();
+        final CharacterSetFabric characterSetFabric = new CharacterSetFabric();
         final CharacterValidation characterValidation = new CharacterValidator();
         final AnagramValidation anagramValidation = new AnagramValidator();
 
         log.info("Starting application");
 
         AnagramOrchestrator anagram =
-                new AnagramOrchestrator(characterSetBuilder, characterValidation, anagramValidation);
+                new AnagramOrchestrator(characterSetFabric, characterValidation, anagramValidation);
         List<String> anagrams = anagram.create(args);
         log.info("Anagrams created");
         for (String ana : anagrams) {
